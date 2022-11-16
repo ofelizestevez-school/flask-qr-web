@@ -7,6 +7,7 @@ You need upload the QR code to Canvas and put a link to your own repository in C
 automatically graded by GitHub Classroom.
 
 ## Video
+* TBA
 
 ## Readings
 
