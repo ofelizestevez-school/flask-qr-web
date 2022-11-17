@@ -1,12 +1,6 @@
-# Docker and Python
+# Docker and Flask
 
-For this assignment you will be combining Docker with Python to create a program that generates a QR code PNG file that
-contains a URL. The QR code can be viewed with the camera on your phone to allow a user to click on it and send them to
-the target website. You must make your program generate a QR code that takes someone to the Docker Hub page for your
-image. This assignment is not automatically graded by GitHub Classroom. You want to make it possible to change the QR
-code by using environment variables that can be overriden in the docker-compose.yml file. You also want to make sure
-that when you run the python script that it doesn't run as the root user. You will need to create a repository on
-Dockerhub to push the Docker image that this project generates.
+For this assignment you will be creating a flask application to generate a QR code based on form input.
 
 Submission Requirements:
 
@@ -22,16 +16,8 @@ Example:
 
 ## Readings - No, really you should read these
 
-* [Entrypoint vs. CMD vs. RUN ](https://codewithyury.com/docker-run-vs-cmd-vs-entrypoint/)
-* [Make QR with Python](https://towardsdatascience.com/generate-qrcode-with-python-in-5-lines-42eda283f325)
-* [Make Dockerfile](https://thenewstack.io/docker-basics-how-to-use-dockerfiles/)
-* [Docker Compose File Basics](https://www.techrepublic.com/article/how-to-build-a-docker-compose-file/)
-* [Why you don't run programs as root](https://bencane.com/2012/02/20/why-you-should-avoid-running-applications-as-root/)
-* [Environment Variables in Python](https://www.nylas.com/blog/making-use-of-environment-variables-in-python/)
-* [Args and Environment Variables in Docker](https://vsupalov.com/docker-arg-env-variable-guide/)
-* [Docker Run Mount Local Windows Important Info](https://medium.com/@kale.miller96/how-to-mount-your-current-working-directory-to-your-docker-container-in-windows-74e47fa104d7)
-* [How to run a program as another user in linux](https://unix.stackexchange.com/questions/232669/how-can-i-run-a-program-as-another-user-in-every-way)
-
+* [How to Dockerize a Flask  Application](https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/)
+* 
 ## Bonus Task - Good Docker practice, it demonstrates using JavaScript / NodeJS
 
 * https://docs.docker.com/get-started/

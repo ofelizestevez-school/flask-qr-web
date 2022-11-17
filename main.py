@@ -3,14 +3,30 @@ import os.path
 from qrcodegenerator import create_qr_code_image
 from config import Config
 
+from flask import Flask, url_for, send_file, request
 
-def main():
+app = Flask(__name__)
+
+
+@app.route("/", methods=['GET'])
+def index_get():
+    # qr_code_url = url_for('static', filename=Config.QR_CODE_DEFAULT_FILE_NAME)
+    form = '<form action="/" method="POST"> \
+            <label for="qrurl">QR URL:</label><br> \
+            <input type="text" id="qrurl" name="qrurl" value="http://www.njit.edu"><br> \
+            <input type="submit" value="Submit"> \
+            </form>'
+    return form
+
+
+@app.route("/", methods=['POST'])
+def index_post():
     full_path = os.getcwd()
-
+    qr_url = request.form.get("qrurl")
     directory_path_and_file_name = os.path.join(full_path, Config.QR_CODE_IMAGE_DIRECTORY,
                                                 Config.QR_CODE_DEFAULT_FILE_NAME)
 
-    qr_image = create_qr_code_image(Config.QR_CODE_DEFAULT_URL)
+    qr_image = create_qr_code_image(qr_url)
     for i in range(0, 1):
         while True:
             try:
@@ -21,7 +37,4 @@ def main():
                 os.mkdir(new_directory_path)
                 continue
             break
-
-
-if __name__ == "__main__":
-    main()
+    return send_file(directory_path_and_file_name, mimetype='image/png')
