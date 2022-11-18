@@ -52,3 +52,9 @@ Example:
 * docker tag local-image:tagname new-repo:tagname <renames the image
 * docker push new-repo:tagname <pushes the image to docker hub
 * docker login <- login to dockerhub if it says access denied when you try to push
+curl -X POST https://reqbin.com/echo/post/form
+   -H "Content-Type: application/x-www-form-urlencoded" 
+   -d "param1=value1&param2=value2"
+
+
+curl -X POST http://flask:8080 -H "Content-Type: application/x-www-form-urlencoded" -d "qrurl=http://wwww.yahoo.com" --output 
