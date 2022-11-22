@@ -1,18 +1,15 @@
 # Docker and Flask
 
-For this assignment you will be creating a flask application to generate a QR code based on form input.
+For this assignment you will be creating a flask application to generate a QR code based on form input.  All you need
+is to type the code into main.py that is in the photos below and practice the commands in the video.
 
-Submission Requirements:
+# Submission Requirements:
 
-1. QR code that links to your own project image on Dockerhub
-
-Example:
-
-* [My Project on Docker Hub QR Code](readme_images/docker_hub.png) <-view with your phone camera and click to go to the site
+Create a text document and put a screenshot of your form and a screenshot of the QR code that the form generates and upload to canvas
 
 ## Lesson Video
 
-[Instructor Video](https://youtu.be/ATajsJRFWEs)
+[Instructor Video](https://youtu.be/5Ca4kUSNA68)
 
 ## Readings - No, really you should read these
 
@@ -22,20 +19,13 @@ Example:
 
 * https://docs.docker.com/get-started/
 
-## Helpful Info
-
-* https://echohack.medium.com/patterns-with-python-poll-an-api-832173a03e93
-* https://stackoverflow.com/questions/2083987/how-to-retry-after-exception
-
 ## Code Photos
+1. [main.py - part 1](readme_images/main-part1.png)
+2. [main.py - part 2](readme_images/main-part2.png)
 
-* [Dockerfile](readme_images/Dockerfile.png)
-* [docker-compose.yml](readme_images/docker-compose.png)
-* [main.py](readme_images/main_py.png)
-* [config.py](readme_images/config_python.png)
-* [qr_dode dunder init](readme_images/qr_creation_code.png) <-must make folder called "qrcodegenerator" and put the code
-  in the __
-  init__.py
+## CURL Command Line Command from inside the container in the video
+curl -X POST http://flask:8080 -H "Content-Type: application/x-www-form-urlencoded" -d "qrurl=http://wwww.yahoo.com" --output 
+
 
 ## Command Reference - No Particular Order
 
@@ -57,4 +47,3 @@ curl -X POST https://reqbin.com/echo/post/form
    -d "param1=value1&param2=value2"
 
 
-curl -X POST http://flask:8080 -H "Content-Type: application/x-www-form-urlencoded" -d "qrurl=http://wwww.yahoo.com" --output 

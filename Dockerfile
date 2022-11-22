@@ -6,6 +6,7 @@ RUN apt-get update &&\
 ENV PATH="/home/myuser/.local/bin:${PATH}"
 ENV FLASK_APP=main.py
 ENV FLASK_RUN_PORT=8080
+ENV FLASK_DEBUG=TRUE
 ENV QR_CODE_IMAGE_DIRECTORY='static'
 ENV QR_CODE_DEFAULT_URL='https://www.njit.edu'
 ENV QR_CODE_DEFAULT_FILE_NAME='default.png'

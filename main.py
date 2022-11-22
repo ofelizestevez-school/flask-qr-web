@@ -11,11 +11,12 @@ app = Flask(__name__)
 @app.route("/", methods=['GET'])
 def index_get():
     # qr_code_url = url_for('static', filename=Config.QR_CODE_DEFAULT_FILE_NAME)
-    form = '<form method="POST" action="/"> \
+    form = '<h1>Make a QR Code</h1><form method="POST" action="/"> \
                 <label for="qrurl">QR URL:</label><br> \
                 <input type="text" id="qrurl" name="qrurl" value="http://www.njit.edu"><br> \
-                <label for="fname">QR URL:</label><br> \
+                 <input type="submit" value="Submit"> \
             </form>'
+
     return form
 
 
@@ -23,6 +24,7 @@ def index_get():
 def index_post():
     full_path = os.getcwd()
     qr_url = request.form.get("qrurl")
+    qr_file_name = request.form.get("qr_file_name")
 
     directory_path_and_file_name = os.path.join(full_path, Config.QR_CODE_IMAGE_DIRECTORY,
                                                 Config.QR_CODE_DEFAULT_FILE_NAME)

@@ -13,6 +13,6 @@ services:
     volumes:
       - .:/home/myuser
   ubuntu:
-    image: kaw393939/ubuntu-vim-curl-ping
+    image: kaw393939/myubuntimage
     stdin_open: true # docker run -i
     tty: true        # docker run -t
