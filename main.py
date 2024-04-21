@@ -11,7 +11,16 @@ app = Flask(__name__)
 @app.route("/", methods=["GET"])
 def index_get():
     """Default / get function"""
-    return render_template('index.html')
+    html = """
+	<h1>Make a QR Code</h1>
+	<form method="POST" action="/">
+		<label for="qr_url">QR URL:</label>
+		<input type="text" name="qr_url" id="qr_url" value="http://njit.edu">
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+    """
+    return html
 
 @app.route("/", methods=["POST"])
 def index_post():
